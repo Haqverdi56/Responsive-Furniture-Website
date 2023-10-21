@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-section {
+  background-image: url("./image/bg-image.svg");
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+}
+header {
+  padding: 40px 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-ul {
+  display: flex;
+  gap: 60px;
+}
+.header-nav-ul li {
+  color: white;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon i {
+  color: white;
+}
+
+.fa-solid.fa-bars {
+  display: none;
+}
+
+/* HEADER MEDIA QUERY */
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 20px 0;
+  }
+  .header {
+    padding: 0 5%;
+  }
+  .navigation {
+    display: none;
+  }
+  .header-icon {
+    display: flex;
+    gap: 15px;
+  }
+  .fa-solid.fa-bars {
+    display: inline;
+  }
+}
+
+/* ------------------- */
+
+/* MAIN SECTION MEDI QUERY */
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.main-center {
+  margin-top: 5rem;
+}
+.main-section .main-section-h1 h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 700px;
+  line-height: 72px;
+}
+
+.main-section .main-section-paragraph {
+  font-size: 18px;
+  line-height: 36px;
+  color: white;
+  max-width: 650px;
+  margin: 40px 50px;
+}
+
+.search-furniture {
+  max-width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.search-furniture input {
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid white;
+  padding: 20px 15px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.586);
+}
+::placeholder {
+  color: white;
+}
+.search-furniture .fa-solid.fa-magnifying-glass {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #faf5f2;
+  padding: 14px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .main-section .main-section-h1 h1 {
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 229px;
+    margin: 0 auto;
+  }
+  .main-section .main-section-paragraph {
+    font-size: 12px;
+    line-height: 24px;
+    max-width: 290px;
+    margin: 40px 50px;
+  }
+}
+
+/* --------------------- */
+
+/* REASONS SECTION */
+
+.main-reasons {
+  padding: 3rem 0;
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.reasons > div {
+    padding: 20px;
+
+}
+
+.reasons > div:hover {
+    scale: 1.1;
+    transition: 300ms;
+    border-radius: 10px;
+  box-shadow: 1px 1px 26px -4px rgba(234, 29, 0, 0.78);
+  -webkit-box-shadow: 1px 1px 26px -4px rgba(234, 29, 0, 0.78);
+  -moz-box-shadow: 1px 1px 26px -4px rgba(234, 29, 0, 0.78);
+}
+
+/* REASONS MEDIA QUERY */
+
+@media screen and (max-width: 767px) {
+    .reasons > div:hover {
+        scale: 1;
+    }
+    .reasons-h1 {
+        padding: 0 5%;
+    }
+    .reasons {
+        display: block;
+    }
+}
+
+/* VISUALIZE SECTION */
+
+.main-visualize {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.main-visualize-left > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-visualize-left, .main-visualize-right {
+    width: 50%;
+}
+
+.main-visualize-right > div img {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .section-visualize {
+        padding: 0 5%;
+    }
+    .main-visualize {
+        flex-direction: column-reverse;
+    }
+    .main-visualize-left, .main-visualize-right {
+        width: 100%;
+    }
+}
+
+/* PRODUCTS SECTION */
+.section-product, .section-visualize{
+    margin-top: 150px;
+}
+
+.products-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.chairs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.chair {
+    width: 25%;
+}
+.chair-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F6;
+}
+
+.chair-image img {
+    padding: 45px 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .products {
+        padding: 0 5%;
+    }
+    .chairs {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .chair {
+        width: 45%;
+    }
+    /* .chair-image {
+        width: 100%;
+    } */
+    .chair-image img {
+        width: 85px;
+        height: 115px;
+        padding: 15px 0;
+    }
+}
